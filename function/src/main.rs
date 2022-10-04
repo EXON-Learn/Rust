@@ -20,9 +20,12 @@ fn main() {
         println!("{}", element);
     }
 
-    for number in (1..=4) {
+    for number in 1..=4 {
         println!("{}", number);
     }
+
+    let f = factorial(4);
+    println!("{}", f);
 }
 
 fn function1() -> i32 {
@@ -32,4 +35,12 @@ fn function1() -> i32 {
         x + 1
     };
     x+y
+}
+
+fn factorial(n: u32) -> u32 {
+    if n == 0 {
+        1
+    } else {
+        n * factorial(n-1)
+    }
 }
